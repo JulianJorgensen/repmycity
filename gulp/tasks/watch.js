@@ -12,9 +12,10 @@ try
     gulp.watch(config.locales, ['shopify-locales']);
     gulp.watch(config.layouts, ['shopify-layouts']);
     gulp.watch(config.config, ['shopify-config']);
+    gulp.watch(config.pages, ['shopify-pages']);
 
     // assets
-    gulp.watch(config.javascript, ['javascript']);
+    gulp.watch(config.javascript, ['customJS']);
     gulp.watch(config.sass, ['sass']);
     gulp.watch(config.images, ['images']);
   });

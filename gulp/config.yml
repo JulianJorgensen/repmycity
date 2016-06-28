@@ -4,18 +4,20 @@ clean:
 
 javascript:
   dest: "_site/assets/"
-  # filename to output
-  filename: "main.js"
+  # custom JS filename to output
+  filename: "main.js.liquid"
+  # vendor JS filename to output
+  vendorFilename: "vendor.js"
   # notification message
   notification: "Running JavaScript"
   # Paths to JavaScript libraries, which are combined into one file
-  src:
+  vendorSrc:
     - "node_modules/foundation-sites/node_modules/jquery/dist/jquery.js"
 
     # AngularJS
-    # - "node_modules/angular/angular.js"
-    # - "node_modules/angular-route/angular-route.js"
-    # - "node_modules/angular-resource/angular-resource.js"
+    - "node_modules/angular/angular.js"
+    - "node_modules/angular-route/angular-route.js"
+    - "node_modules/angular-resource/angular-resource.js"
 
     # Core Foundation files, all Foundation components need this!
     - "node_modules/foundation-sites/js/foundation.core.js"
@@ -55,8 +57,15 @@ javascript:
     # - "node_modules/foundation-sites/js/foundation.util.touch.js"
     - "node_modules/foundation-sites/js/foundation.util.triggers.js"
 
-    # Paths to your own project code are here
-    - "_source/assets/javascript/**/*"
+  src:
+    # custom js: controllers
+    - "_source/assets/javascript/main.js"
+    - "_source/assets/javascript/routes.js"
+
+    # - "_source/assets/javascript/services/**/*"
+    - "_source/assets/javascript/controllers/**/*"
+    # - "_source/assets/javascript/directives/**/*"
+
 
 sass:
   # Autoprefixer will make sure your CSS works with these browsers
@@ -77,6 +86,8 @@ shopify:
   mainConfigDest: "_site"
   configSrc: "_source/config/**/*"
   configDest: "_site/config"
+  pagesSrc: "_source/pages/**/*"
+  pagesDest: "_site/assets"
   templatesSrc: "_source/templates/**/*"
   templatesDest: "_site/templates"
   snippetsSrc: "_source/snippets/**/*"
@@ -99,3 +110,4 @@ watch:
   layouts: "_source/layout/**/*"
   snippets: "_source/snippets/**/*"
   templates: "_source/templates/**/*"
+  pages: "_source/pages/**/*"

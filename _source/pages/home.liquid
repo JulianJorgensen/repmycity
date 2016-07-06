@@ -1,3 +1,7 @@
-<h1>Homesiii page</h1>
+<h1>Homepage</h1>
 
-<h1>test</h1>{{ 'layout.customer.create_account' | t | customer_register_link }}
+{% for collection in collections %}
+  <h1>{{ collection.handle }}</h1>
+  <h2>{{ collection.all_products_count }} total products in this collection</h2>
+  <hr>
+{% endfor %}

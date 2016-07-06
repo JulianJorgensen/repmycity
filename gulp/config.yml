@@ -73,10 +73,11 @@ sass:
     - "ie >= 9"
     - "safari >= 7"
     - "ios >= 8"
+  filename: "main.scss.liquid"
   dest: "_site/assets/"
   notification: "Running Sass"
   src:
-    - "_source/assets/styles/*.scss"
+    - "_source/assets/styles/**/*"
   includePaths:
     - "node_modules/foundation-sites/scss"
     - "node_modules/motion-ui/src"

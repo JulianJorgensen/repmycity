@@ -56,8 +56,14 @@
 // =============================
 // custom styles import
 // =============================
+@import 'footer';
 
-.test{
-  @include flex-grid-row(9);
-  color: green;
+.site{
+  max-width: 1920px;
+  margin: 0 auto;
+  background: $white url(#{'{{ "bg.jpg" | asset_url }}'}) center center repeat;
+}
+
+.main-content{
+  min-height: rem-calc(1000);
 }

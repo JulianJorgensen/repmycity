@@ -14,8 +14,9 @@ gulp.task('sass', function() {
         includePaths: config.includePaths
         })
       .on('error', $.sass.logError))
-    .pipe(autoprefixer(config.compatibility))
-    .pipe(uglifycss())
+    // .pipe(autoprefixer(config.compatibility))
+    // .pipe(uglifycss())
+    .pipe($.concat(config.filename))
     .pipe(gulp.dest(config.dest));
 
   return pipe;

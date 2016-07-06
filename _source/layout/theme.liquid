@@ -32,7 +32,7 @@
   <meta name="theme-color" content="{{ settings.color_primary }}">
 
   <!-- CSS ================================================== -->
-  {{ 'main.css' | asset_url | stylesheet_tag }}
+  {{ 'main.scss.css' | asset_url | stylesheet_tag }}
 
   {% include 'google-fonts' %}
 
@@ -52,21 +52,23 @@
 
 <body id="{{ page_title | handle }}" class="{% if customer %}customer-logged-in {% endif %}template-{{ template | replace: '.', ' ' | truncatewords: 1, '' | handle }}" >
 
-  <div class="row">
-    <div class="small-12 columns">
-      {% include 'header' %}
+  <div class="site">
+    <div class="row">
+      <div class="small-12 columns">
+        {% include 'header' %}
+      </div>
     </div>
-  </div>
 
-  <div class="row">
-    <div class="small-12 columns">
-      {{ content_for_layout }}
+    <div class="row main-content">
+      <div class="small-12 columns">
+        {{ content_for_layout }}
+      </div>
     </div>
-  </div>
 
-  <div class="row">
-    <div class="small-12 columns">
-      <!-- {% include 'footer' %} -->
+    <div class="row">
+      <div class="small-12 columns">
+        {% include 'footer' %}
+      </div>
     </div>
   </div>
 

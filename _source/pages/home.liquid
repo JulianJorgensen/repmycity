@@ -1,4 +1,26 @@
-<h1>Homepage</h1>
+<!--
+<h1>Home1111page</h1>
+<h1>{[{ e.products[0].image.src }]}</h1>
+-->
+{% if settings.home_section_1 != blank %}
+  {% include settings.home_section_1 %}
+	<h1>Home1111page</h1>
+{% endif %}
+
+{% if settings.home_section_2 != blank %}
+  {% include settings.home_section_2 %}
+<h1>Home2222222page</h1>
+{% endif %}
+
+{% if settings.home_section_3 != blank %}
+  {% include settings.home_section_3 %}
+<h1>Home3333333page</h1>
+{% endif %}
+
+{% if settings.home_section_4 != blank %}
+  {% include settings.home_section_4 %}
+<h1>Home444444page</h1>
+{% endif %}
 
 {% for collection in collections %}
   <h1>{{ collection.handle }}</h1>

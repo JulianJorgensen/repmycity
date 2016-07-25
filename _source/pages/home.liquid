@@ -9,7 +9,7 @@
 
 {% if settings.home_section_2 != blank %}
   {% include settings.home_section_2 %}
-<h1>Home2222222page</h1>
+<h1>Home page</h1>
 {% endif %}
 
 {% if settings.home_section_3 != blank %}
@@ -27,3 +27,12 @@
   <h2>{{ collection.all_products_count }} total products in this collection</h2>
   <hr>
 {% endfor %}
+
+<div class="products">
+	<div ng-repeat="product in products">
+		<div style="margin-top:10px;">
+			<img src="{[{product.images[0].src}]}" style="width:100px;height:100px;"></img>
+			<span>Title:  {[{product.title}]}</span>
+		</div>
+	</div>
+</div>

@@ -4,25 +4,25 @@
 git clone https://github.com/JulianJorgensen/repmycity.git
 
 - make new branch
-( "webdev" is new branch name)
-git checkout -b webdev
+	( "webdev" is new branch name)
+	git checkout -b webdev
+	*Repeat follow steps after you changed the file*
 
-/*Repeat follow steps after you changed the file*/
 - After change, apply change
-git add .
-git commit -a -m "commit message"
+	git add .
+	git commit -a -m "commit message"
 
 - Push commit
-git push --set-upstream origin webdev
+	git push --set-upstream origin webdev
 
 #2. Setup windows Development Environment
 
 ##2.1 Some programs and developments kits should be installed before:
 
- * Microsoft Visual studio 2013 and Win7 SDK
- * Ruby 2 and Devkit
- * python 2
- * node (& npm)
+ - Microsoft Visual studio 2013 and Win7 SDK
+ - Ruby 2 and Devkit
+ - python 2
+ - node (& npm)
 
 ##2.2 System Requirements: Windows 7 Service Pack 1
   If you not using this, please open the "Windows update" and Upgrade to Service Pack 1.
@@ -87,18 +87,20 @@ git push --set-upstream origin webdev
 	npm start
 
 #4. Install Issues
-There might be issues while installing.
-The main issue is phantomjs and node-sass.
 
-*phantomjs
- 	error: Find not on path
+There might be issues while installing.
+The main issues are phantomjs and node-sass.
+
+- phantomjs
+	error: Find not on path
 	This is your network problem, so you should  download them manually.
-	For phantomjs, you should download the phantomjs from "https://github.com/Medium/phantomjs" and
-	save them in C:/Users/Adminstarator/App Data/Local/temp/phantomjs
-*node header.tar.gz
+	For phantomjs, you should download the phantomjs from "https://github.com/Medium/phantomjs" and	save them in C:/Users/Adminstarator/App Data/Local/temp/phantomjs
+
+- node header.tar.gz
 	download from https://nodejs.org/download/release/v6.3.1 (node install version)
 	Save them in C:/Users/Adminstrator/.node-gyp/
-*node-sass
+
+- node-sass
 	while installing node-sass, it can ask you to install the python2 and VCBuilder.exe.
 	In python install directory, check there are file with name "python2".
 	If not, clone python.exe as python2.exe.

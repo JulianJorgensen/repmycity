@@ -68,11 +68,14 @@ git push --set-upstream origin webdev
 
 - Install bundler, bower, gulp
 	If you didn't install bundler, bower, gulp, then please install them as follows.
+	To install bower is optional.
 
 	gem install bundler
 	npm install -g bower
 	cd repmycity
-	bower install
+	
+	[ bower install ]
+
 	npm install -g --save-dev gulp
 	npm install -g --save-dev gulp-bower
 	npm install --global gulp-cli

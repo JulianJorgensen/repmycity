@@ -1,9 +1,13 @@
 @charset 'utf-8';
 
+//font
+//{{ '_fonts.css' | asset_url | stylesheet_tag }}
+@import '_fonts';
+
 // =============================
 // import foundation
 // =============================
-@import 'settings';
+@import '_settings';
 @import 'foundation';
 @import 'motion-ui';
 
@@ -56,14 +60,19 @@
 // =============================
 // custom styles import
 // =============================
-@import 'footer';
+@import '_footer';
+
+
 
 .site{
   max-width: 1920px;
   margin: 0 auto;
-  background: $white url(#{'{{ "bg.jpg" | asset_url }}'}) center center repeat;
+  background: $white url(#{'{{ "bg.jpg" | asset_url }}'}) center center no-repeat;
+  background-size: cover;
 }
 
 .main-content{
   min-height: rem-calc(1000);
 }
+
+@import '_index';

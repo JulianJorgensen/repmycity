@@ -8,8 +8,8 @@ var cache         = require('gulp-cached');
 
 gulp.task('sass', function() {
   var pipe = gulp.src(config.src)
-    .pipe(cache())
-    .pipe($.sourcemaps.init())
+    // .pipe(cache())
+    // .pipe($.sourcemaps.init())
     .pipe($.sass({
         includePaths: config.includePaths
         })

@@ -102,10 +102,15 @@ images:
   src: "_source/assets/images/**/*"
   dest: "_site/assets/"
 
+fonts:
+  src: "_source/assets/fonts/**/*"
+  dest: "_site/assets"
+
 watch:
   javascript: "_source/assets/javascript/**/*"
   sass: "_source/assets/styles/**/*"
   images: "_source/assets/images/**/*"
+  fonts: "_source/assets/fonts/**/*"
   config: "_source/config/**/*"
   locales: "_source/locales/**/*"
   layouts: "_source/layout/**/*"

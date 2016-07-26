@@ -18,6 +18,7 @@ try
     gulp.watch(config.javascript, ['customJS']);
     gulp.watch(config.sass, ['sass']);
     gulp.watch(config.images, ['images']);
+    gulp.watch(config.fonts, ['fonts']);
   });
 
   // shopify watch and deploy to shopify theme

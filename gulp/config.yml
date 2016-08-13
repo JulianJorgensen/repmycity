@@ -65,7 +65,8 @@ javascript:
     # - "_source/assets/javascript/services/**/*"
     - "_source/assets/javascript/controllers/**/*"
     # - "_source/assets/javascript/directives/**/*"
-
+  movesrc:
+    - "_source/assets/javascript/services/**/*"
 
 sass:
   # Autoprefixer will make sure your CSS works with these browsers

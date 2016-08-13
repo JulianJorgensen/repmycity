@@ -10,12 +10,24 @@
       {
         "type": "paragraph",
         "content": "This theme is fully supported by Shopify. For support and customizations, contact [theme-support@shopify.com](mailto:theme-support@shopify.com?subject=[Launchpad]+Theme+Support)."
+      },
+      {
+        "type": "paragraph",
+        "content": "Theme settings allow designers to provide an easy way for any user to customize the look and feel of their shop without having to delve into HTML or CSS code. Please see our [help page on theme settings](http:\/\/docs.shopify.com\/themes\/theme-templates\/settings) to learn more about how you can make the theme customizable."
+      },
+      {
+        "type": "paragraph",
+        "content": "Review [Timber's documentation](http:\/\/shopify.github.io\/Timber\/) for any development help."
       }
     ]
   },
   {
     "name": "Colors",
     "settings": [
+      {
+        "type": "header",
+        "content": "General colors"
+      },
       {
         "type": "color",
         "id": "color_body_bg",
@@ -45,6 +57,12 @@
         "id": "color_secondary",
         "label": "Secondary buttons",
         "default": "#dcdcdc"
+      },
+      {
+        "type": "color",
+        "id": "color_borders",
+        "label": "Borders",
+        "default": "#e5e5e5"
       },
       {
         "type": "color",

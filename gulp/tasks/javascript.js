@@ -28,6 +28,13 @@ gulp.task('vendorJS', function(){
     .pipe(gulp.dest(config.dest));
 });
 
-gulp.task('javascript', function(done) {
-  sequence('vendorJS', 'customJS', done);
+gulp.task('moveJS', function(){
+  return gulp.src(config.movesrc)
+    .pipe(cache())
+    .pipe(gulp.dest(config.dest));
 });
+
+gulp.task('javascript', function(done) {
+  sequence('vendorJS', 'customJS', 'moveJS', done);
+});
+

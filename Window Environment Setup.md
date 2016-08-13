@@ -105,3 +105,4 @@ The main issues are phantomjs and node-sass.
 	In python install directory, check there are file with name "python2".
 	If not, clone python.exe as python2.exe.
 	If you install the Microsoft Visual Studio 2013, then VCBuilder problem has solved.
+	After this, you can gulp start.

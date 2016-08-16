@@ -25,7 +25,6 @@
 }
 
 .slick-dotted.slick-slider{
-	min-height: 350px;
 	background:transparent;
 }
 
@@ -61,7 +60,27 @@ ul.slick-dots{
 		padding-left: 0;
 		padding-right: 0;
 	}
+
+	.information-section{
+		padding: 5px;
+		font-family: 'Neutratext Light';
+	}
+
+	.information-section
+	{
+		h1{
+			font-size: 1.4rem;
+		}
+
+		p{
+			font-size: 1.2rem;
+		}
+	}
 }
+
+
+
+
 
 .information-section{
 	border: solid 10px $green;
@@ -139,6 +158,30 @@ ul.slick-dots{
 		color: white;
 	}
 
+}
+
+@media screen and (max-width: 40em)
+{
+	.information-section{
+		padding: 5px;
+		font-family: 'Neutratext Light';
+	}
+
+	.information-section
+	{
+		h1{
+			font-size: 1.4rem;
+		}
+
+		p{
+			font-size: 1.2rem;
+		}
+	}
+}
+
+#info_key_search input:active, #info_key_search input:hover, #info_key_search input:focus{
+	background: $greenback;
+	color: white;
 }
 
 span.whitespan{

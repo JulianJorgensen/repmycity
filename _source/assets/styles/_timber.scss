@@ -94,7 +94,7 @@ $colorLinkHover: lighten($colorPrimary, 15%);
 
 // Nav and dropdown link background
 $colorNav: #f2f2f2;
-$colorNavText: #333;
+$colorNavText: #ccc;
 
 
 
@@ -273,6 +273,7 @@ $max: max-width;
 html, body {
   padding: 0;
   margin: 0;
+  height: auto;
 }
 
 article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {
@@ -687,12 +688,14 @@ $class-type: unquote(".");
 /*============================================================================
   #Basic Styles
 ==============================================================================*/
-html {
-  background-color: $colorFooterBg;
-}
-
 body {
-  background-color: $colorBody;
+  max-width: 1920px;
+  margin: 0 auto;
+  background: radial-gradient(transparent 0%, rgba(0, 0, 0, 0.2) 50%, rgba(0, 0, 0, 0.6) 100%), url(#{'{{ "bg.jpg" | asset_url }}'}) center center no-repeat;
+  background: -webkit-radial-gradient(transparent 0%, rgba(0, 0, 0, 0.2) 50%, rgba(0, 0, 0, 0.6) 100%), url(#{'{{ "bg.jpg" | asset_url }}'}) center center no-repeat; /* Safari 5.1-6.0 */
+  background: -o-radial-gradient(transparent 0%, rgba(0, 0, 0, 0.2) 50%, rgba(0, 0, 0, 0.6) 100%), url(#{'{{ "bg.jpg" | asset_url }}'}) center center no-repeat; /* Safari 5.1-6.0 */
+  background: -moz-radial-gradient(transparent 0%, rgba(0, 0, 0, 0.2) 50%, rgba(0, 0, 0, 0.6) 100%), url(#{'{{ "bg.jpg" | asset_url }}'}) center center no-repeat; /* Safari 5.1-6.0 */
+  background-size: cover;
 }
 
 [tabindex='-1']:focus {
@@ -1040,8 +1043,7 @@ hr {
 /*============================================================================
   #Links and Buttons
 ==============================================================================*/
-a,
-.text-link {
+a, .text-link {
   color: $colorLink;
   text-decoration: none;
   background: transparent;
@@ -1647,6 +1649,7 @@ label.error {
 .icon-arrow-down:before { content: "\e607"; }
 .icon-bitcoin:before { content: "\42"; }
 .icon-cart:before { content: "\e600"; }
+//.icon-cart:before { background: url('//cdn.shopify.com/s/files/1/1356/7883/t/1/assets/cart.png'); }
 .icon-cirrus:before { content: "\43"; }
 .icon-dankort:before { content: "\64"; }
 .icon-diners_club:before { content: "\63"; }
@@ -1801,10 +1804,11 @@ label.error {
 
 .site-header__search {
   display: inline-block;
-  max-width: 400px;
-  margin-top: $gutter / 2;
+  max-width: 200px;
+  margin-top: 0;
   width: 100%;
 }
+
 
 .search-bar {
   max-width: 100%;
@@ -1813,6 +1817,10 @@ label.error {
     margin-left: auto;
     margin-right: auto;
   }
+}
+
+.site-header__search form{
+  margin: 0;
 }
 
 /*============================================================================
@@ -1835,6 +1843,15 @@ label.error {
   > li {
     position: relative;
     display: inline-block;
+  }
+
+  li a {
+    color: $colorNavText;
+    &:hover,
+    &:active,
+    &:focus {
+      color: darken($colorNavText, 15%);
+    }
   }
 }
 
@@ -2528,4 +2545,12 @@ label.error {
 
 .ajaxcart-item__price-strikethrough {
   float: right;
+}
+
+/*============= Custom for Header===========*/
+span#CartCount{
+  color: $colorPrimary;
+}
+a.site-header__cart-toggle{
+  margin-left:30px;
 }

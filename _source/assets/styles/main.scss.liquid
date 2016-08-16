@@ -60,20 +60,20 @@
 // =============================
 // custom styles import
 // =============================
-@import '_footer';
 
 @import '_timber';
 @import '_gift-card';
 
-.site{
-  max-width: 1920px;
-  margin: 0 auto;
-  background: $white url(#{'{{ "bg.jpg" | asset_url }}'}) center center no-repeat;
-  background-size: cover;
-}
+@import '_header';
+@import '_footer';
 
 .main-content{
   min-height: rem-calc(1000);
+}
+
+section{
+	margin-top: 30px;
+	margin-bottom: 50px;
 }
 
 @import '_index';

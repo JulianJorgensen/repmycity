@@ -39,21 +39,23 @@
 //  34. Title Bar
 //  35. Tooltip
 //  36. Top Bar
+//  37. Information Section
 
 @import 'util/util';
 
 // 1. Global
 // ---------
-$colorPrimary: #f45b4f;
+$colorPrimary: #48b056;
 $colorSecondary: #bbbbbb;
 $colorBody: #ffffff;
 $colorBorder: #dddddd;
 $colorTextBody: #333333;
 $colorBody: #ffffff;
 
-// Site Footer
-$colorFooterBg: #f2f2f2;
+//Footer
+$colorFooterBg: #0a0a0a;
 $colorFooterText: #636363;
+
 // Logo max width
 $logoMaxWidth: 450px;
 $color_footer_social_link: #555555;
@@ -74,6 +76,10 @@ $dark-gray: #8a8a8a;
 
 $black: #0a0a0a;
 $white: #fefefe;
+$green: #48b056;
+$wwhite: #ffffff;
+$ewhite: #eaeaea;
+
 
 $gray10: lighten(black, 10);
 $gray20: lighten(black, 20);
@@ -263,7 +269,7 @@ $button-margin: 0 0 $global-margin 0;
 $button-fill: solid;
 $button-background: $primary-color;
 $button-background-hover: scale-color($button-background, $lightness: -15%);
-$button-color: $white;
+$button-color: #666666;
 $button-color-alt: $black;
 $button-radius: $global-radius;
 $button-sizes: (
@@ -367,7 +373,7 @@ $select-background: $white;
 $select-triangle-color: $dark-gray;
 $select-radius: $global-radius;
 $input-color: $black;
-$input-placeholder-color: $medium-gray;
+$input-placeholder-color: $wwhite;
 $input-font-family: inherit;
 $input-font-size: rem-calc(16);
 $input-background: $white;
@@ -593,6 +599,13 @@ $topbar-unstack-breakpoint: medium;
 //37. information section
 //------------
 
-$green: #48b056;
-$wwhite: #ffffff;
-$ewhite: #eaeaea;
+//37. information section
+//------------
+
+
+$pt-size: 1.3rem;
+$vendor-t1: 0.7rem;
+$vendor-t2: 0.65rem;
+
+$greenback: rgba(72, 184, 85, 1);
+$greenback-trans: rgba(72, 184, 85, 0.4);

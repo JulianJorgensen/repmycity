@@ -9,14 +9,14 @@ var cache         = require('gulp-cached');
 // BUILD SHOPIFY MAIN CONFIG FILE
 gulp.task('shopify-main-config', function(){
   return gulp.src(config.mainConfigSrc)
-    .pipe(cache())
+    //.pipe(cache())
     .pipe(gulp.dest(config.mainConfigDest));
 });
 
 // BUILD SHOPIFY CONFIG FOLDER FILES
 gulp.task('shopify-config-files', function(){
   return gulp.src(config.configSrc)
-    .pipe(cache())
+    //.pipe(cache())
     .pipe(gulp.dest(config.configDest));
 });
 

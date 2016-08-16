@@ -117,7 +117,7 @@
                     {% comment %}
                       Get a brief excerpt of raw text from the page/product
                     {% endcomment %}
-                    <p>{{ item.content | strip_html | truncatewords: 50 }}</p>
+                    <p>{{ item.content | highlight: search.terms | strip_html | truncatewords: 50 }}</p>
                   </div>
                 </div>
                 {% unless forloop.last %}<hr>{% endunless %}

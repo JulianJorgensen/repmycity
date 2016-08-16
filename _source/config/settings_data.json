@@ -1,7 +1,7 @@
 {
-  "current": "Red and black",
+  "current": "Default",
   "presets": {
-    "Red and black": {
+    "Default": {
       "ajax_cart_method": "drawer",
       "cart_notes_enable": true,
       "color_body_bg": "#ffffff",
@@ -10,7 +10,7 @@
       "color_footer_bg": "#f2f2f2",
       "color_footer_social_link": "#555555",
       "color_footer_text": "#636363",
-      "color_primary": "#f45b4f",
+      "color_primary": "#48b056",
       "color_secondary": "#bbbbbb",
       "color_button_primary_text": "#ffffff",
       "color_button_secondary_text": "#ffffff",
@@ -26,26 +26,25 @@
       "left_aligned_logo": false,
       "show_header_lines": true,
       "favicon_enable": false,
-      "footer_newsletter_enable": true,
-      "footer_social_enable": true,
-      "header_message": "",
-      "header_search_enable": true,
       "footer_blog_enable": true,
       "footer_blog": "news",
       "footer_quicklinks_enable": true,
       "footer_quicklinks_linklist": "footer",
       "footer_second_menu_enable": false,
       "footer_second_menu": "",
-      "footer_social_enable": true,
+      "footer_social_enable": false,
       "footer_contact_enable": false,
       "footer_contact_text": "",
       "footer_newsletter_enable": false,
-      "newsletter_form_action": "",
       "footer_show_methods_of_payment": true,
+      "header_message": "",
+      "header_search_enable": true,
+      "newsletter_form_action": "",
       "show_footer_lines": true,
       "home_section_1": "featured-products",
       "home_section_2": "home-content",
       "home_section_3": "",
+      "slider_home_show" : true,
       "slider_home_auto": true,
       "slider_home_show_dots": false,
       "slider_home_rate": "7000",
@@ -74,7 +73,7 @@
       "home_featured_products_show_heading": false,
       "home_page_content": "frontpage",
       "home_page_show_heading": true,
-      "logo_use_image": true;
+      "logo_use_image": true,
       "product_quantity_enable": true,
       "product_image_zoom_type": "lightbox",
       "product_thumbnails_position": "below",
@@ -118,7 +117,8 @@
       "checkout_body_font": "Helvetica Neue",
       "checkout_accent_color": "#bbbbbb",
       "checkout_button_color": "#f45b4f",
-      "checkout_error_color": "#f45b4f"
+      "checkout_error_color": "#f45b4f",
+      "show_breadcrumb": false
     }
   }
 }

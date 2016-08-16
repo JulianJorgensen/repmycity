@@ -1,3 +1,60 @@
+.site-header__search .icon-search{
+	font-size: 24px;
+}
+
+.site-header__search button.btn{
+	padding: 2px 3px;
+}
+
+.site-header__search .input-group-field{
+	font-size: 0.8rem;
+	color: white;
+	background-color:#666;
+	padding: 0 5px;
+	height: 24px;
+	margin: 10px 2px;
+	border: none;
+}
+
+.site-header__search input:hover,.site-header__search input:active{
+	background-color: #666;
+}
+
+.upload_design_nav{
+	margin: -35px 0;
+}
+
+.slick-dotted.slick-slider{
+	min-height: 350px;
+	background:transparent;
+}
+
+.slick-track{
+	background:white;
+}
+
+div.slick-list{
+	overflow:visible;
+}
+
+button.slick-arrow{
+	display:none;
+	visibility:hidden;
+}
+
+section.slider{
+	margin: 50px 0;
+	height: auto;
+}
+
+ul.slick-dots{
+	visibility:hidden;
+}
+
+.slick-slide img{
+	max-height: 400px;
+}
+
 @media screen and (min-width: 40em)
 {
 	.column, .columns{
@@ -16,18 +73,137 @@
 	font-family: 'Neutratext Light';
 }
 
-.information-section h1{
-	font-family: 'Neutratext Light';
-	font-size: 2.7rem;
-	color: $green;
+.information-section 
+{
+	h1{
+		font-family: 'Neutratext Light';
+		font-size: 2.7rem;
+		color: $green;
+	}
+
+	h1 span{
+		color: $wwhite;
+	}
+
+	p{
+		font-family: 'Neutratext Light';
+		font-size: 1.7rem;
+		color: $ewhite;
+	}
+
+	.wrapper .grid__item > button {
+		min-height: 100px;
+		display: inline-block;
+		width: 258px;
+	}
+
+	.wrapper .grid__item > button:active{
+		position: relative;
+		top: -1px;
+	}
+	
+	button#info_shop{
+		background:url(#{'{{ "shopnow.png" | asset_url }}'}) center center no-repeat;
+	}
+	button#info_upload{
+		background:url(#{'{{ "upload.png" | asset_url }}'}) center center no-repeat;
+	}
+
+	#info_key_search{
+		display: inline-block;
+	}
+
+	form {
+		margin: 20px 10px 0 -15px;
+		border: 5px solid #666;
+		padding: 8px 10px;
+		background: $greenback-trans;
+	}
+
+	form button{
+		background: transparent;
+		font-size: 1.9rem;
+		padding: 0 10px 0 0;
+		margin-right: 10px;
+	}
+
+	form input{
+		background: $greenback;
+		color: white;
+		font-size: 1.3rem;
+		border:none;
+	}
+
+	form input:active, form input:hover{
+		background: $greenback;
+		color: white;
+	}
+
 }
 
-.information-section h1 span{
+span.whitespan{
 	color: $wwhite;
 }
 
-.information-section p{
-	font-family: 'Neutratext Light';
-	font-size: 1.7rem;
-	color: $ewhite;
+.shirtdiv{
+	background: white;
+	border-radius: 10px;
+	padding: 5px;
+	margin: 10px 10px;
+	display: block;
 }
+
+.shirtdiv{
+	p.h6{
+		text-align: center;
+		margin-bottom: 1rem;
+	}
+	hr.greenhr{
+		border-color: $green;
+		margin: 20px 0 10px;
+	}
+	.grid__image{
+		margin: 0;
+		min-height: 300px;
+		max-height: 400px;
+		line-height: 350px;
+	}
+
+	.grid__image img{
+		display: inline-block;
+		margin: auto;
+		vertical-align: middle;
+	}
+
+	.vendor-image{
+		width: 30px;
+		height: 30px;
+		border-radius: 50%;
+		display: inline-block;
+		vertical-align: sub;
+	}
+
+	.vendor-desc{
+		display: inline-block;
+	}
+
+	.vendor-desc p{
+		margin-bottom: 0;
+		color: $green;
+	}
+	.vendor-t1{
+		font-size: $vendor-t1;
+		font-weight: bold;
+	}
+	.vendor-t2{
+		font-size: $vendor-t2;
+	}
+}
+
+
+span.grayspan{
+	color: darkgray;
+}
+
+
+

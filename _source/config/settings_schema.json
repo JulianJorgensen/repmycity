@@ -2,7 +2,7 @@
   {
     "name": "theme_info",
     "logo": "https:\/\/cdn.shopify.com\/s\/global\/branding\/shopify_logo_256x256.png",
-    "settings": [
+     "settings": [
       {
         "type": "header",
         "content": "Launchpad Theme"
@@ -33,12 +33,6 @@
         "id": "color_body_bg",
         "label": "Background",
         "default": "#ffffff"
-      },
-      {
-        "type": "color",
-        "id": "color_borders",
-        "label": "Lines and borders",
-        "default": "#e5e5e5"
       },
       {
         "type": "color",
@@ -1232,6 +1226,11 @@
     "settings": [
       {
         "type": "checkbox",
+        "id": "slider_home_show",
+        "label": "Show home slidershow"
+      },
+      {
+        "type": "checkbox",
         "id": "slider_home_auto",
         "label": "Auto-rotate slides"
       },
@@ -1297,9 +1296,9 @@
       },
       {
         "type": "image",
-        "id": "slide_1.jpg",
+        "id": "slide_1_img",
         "label": "Image",
-        "info": "970 x 340px recommended"
+        "info": "500 x 500px recommended"
       },
       {
         "type": "text",
@@ -1322,9 +1321,9 @@
       },
       {
         "type": "image",
-        "id": "slide_2.jpg",
+        "id": "slide_2_img",
         "label": "Image",
-        "info": "970 x 340px recommended"
+        "info": "500 x 500px recommended"
       },
       {
         "type": "text",
@@ -1347,9 +1346,9 @@
       },
       {
         "type": "image",
-        "id": "slide_3.jpg",
+        "id": "slide_3_img",
         "label": "Image",
-        "info": "970 x 340px recommended"
+        "info": "500 x 500px recommended"
       },
       {
         "type": "text",
@@ -1372,9 +1371,9 @@
       },
       {
         "type": "image",
-        "id": "slide_4.jpg",
+        "id": "slide_4_img",
         "label": "Image",
-        "info": "970 x 340px recommended"
+        "info": "500 x 500px recommended"
       },
       {
         "type": "text",
@@ -1397,9 +1396,9 @@
       },
       {
         "type": "image",
-        "id": "slide_5.jpg",
+        "id": "slide_5_img",
         "label": "Image",
-        "info": "970 x 340px recommended"
+        "info": "500 x 500px recommended"
       },
       {
         "type": "text",
@@ -1422,9 +1421,9 @@
       },
       {
         "type": "image",
-        "id": "slide_6.jpg",
+        "id": "slide_6_img",
         "label": "Image",
-        "info": "970 x 340px recommended"
+        "info": "500 x 500px recommended"
       },
       {
         "type": "text",
@@ -1434,6 +1433,31 @@
       {
         "type": "text",
         "id": "slide_6_alt",
+        "label": "Alt text"
+      }
+        {
+        "type": "header",
+        "content": "Slide 6"
+      },
+      {
+        "type": "checkbox",
+        "id": "slide_7",
+        "label": "Enable"
+      },
+      {
+        "type": "image",
+        "id": "slide_7_img",
+        "label": "Image",
+        "info": "500 x 500px recommended"
+      },
+      {
+        "type": "text",
+        "id": "slide_7_link",
+        "label": "Link URL"
+      },
+      {
+        "type": "text",
+        "id": "slide_7_alt",
         "label": "Alt text"
       }
     ]
@@ -1818,6 +1842,16 @@
         "type": "checkbox",
         "id": "share_google",
         "label": "+1 on Google Plus"
+      }
+    ]
+  },
+  {
+    "name": "Custom Pages",
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "show_breadcrumb",
+        "label": "Show Breadcrumbs"
       }
     ]
   }

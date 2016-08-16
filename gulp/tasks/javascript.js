@@ -30,7 +30,7 @@ gulp.task('vendorJS', function(){
 
 gulp.task('moveJS', function(){
   return gulp.src(config.movesrc)
-    .pipe(cache())
+    //.pipe(cache())
     .pipe(gulp.dest(config.dest));
 });
 

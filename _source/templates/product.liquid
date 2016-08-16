@@ -19,7 +19,9 @@
   {% endcomment %}
   {% assign current_variant = product.selected_or_first_available_variant %}
 
-  {% include 'breadcrumb' %}
+  {% if settings.show_breadcrumb %}
+    {% include 'breadcrumb' %}
+  {% endif %}
 
   <div class="grid product-single">
     <div class="grid__item large--one-half text-center">

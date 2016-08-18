@@ -2,7 +2,7 @@
   {
     "name": "theme_info",
     "logo": "https:\/\/cdn.shopify.com\/s\/global\/branding\/shopify_logo_256x256.png",
-     "settings": [
+    "settings": [
       {
         "type": "header",
         "content": "Launchpad Theme"
@@ -1296,9 +1296,9 @@
       },
       {
         "type": "image",
-        "id": "slide_1_img",
+        "id": "slide_1.jpg",
         "label": "Image",
-        "info": "500 x 500px recommended"
+        "info": "970 x 340px recommended"
       },
       {
         "type": "text",
@@ -1321,9 +1321,9 @@
       },
       {
         "type": "image",
-        "id": "slide_2_img",
+        "id": "slide_2.jpg",
         "label": "Image",
-        "info": "500 x 500px recommended"
+        "info": "970 x 340px recommended"
       },
       {
         "type": "text",
@@ -1346,9 +1346,9 @@
       },
       {
         "type": "image",
-        "id": "slide_3_img",
+        "id": "slide_3.jpg",
         "label": "Image",
-        "info": "500 x 500px recommended"
+        "info": "970 x 340px recommended"
       },
       {
         "type": "text",
@@ -1371,9 +1371,9 @@
       },
       {
         "type": "image",
-        "id": "slide_4_img",
+        "id": "slide_4.jpg",
         "label": "Image",
-        "info": "500 x 500px recommended"
+        "info": "970 x 340px recommended"
       },
       {
         "type": "text",
@@ -1396,9 +1396,9 @@
       },
       {
         "type": "image",
-        "id": "slide_5_img",
+        "id": "slide_5.jpg",
         "label": "Image",
-        "info": "500 x 500px recommended"
+        "info": "970 x 340px recommended"
       },
       {
         "type": "text",
@@ -1421,9 +1421,9 @@
       },
       {
         "type": "image",
-        "id": "slide_6_img",
+        "id": "slide_6.jpg",
         "label": "Image",
-        "info": "500 x 500px recommended"
+        "info": "970 x 340px recommended"
       },
       {
         "type": "text",
@@ -1434,21 +1434,16 @@
         "type": "text",
         "id": "slide_6_alt",
         "label": "Alt text"
-      }
-        {
-        "type": "header",
-        "content": "Slide 6"
-      },
-      {
+      },{
         "type": "checkbox",
         "id": "slide_7",
         "label": "Enable"
       },
       {
         "type": "image",
-        "id": "slide_7_img",
+        "id": "slide_7.jpg",
         "label": "Image",
-        "info": "500 x 500px recommended"
+        "info": "970 x 340px recommended"
       },
       {
         "type": "text",
@@ -1458,6 +1453,27 @@
       {
         "type": "text",
         "id": "slide_7_alt",
+        "label": "Alt text"
+      },
+      {
+        "type": "checkbox",
+        "id": "slide_8",
+        "label": "Enable"
+      },
+      {
+        "type": "image",
+        "id": "slide_8.jpg",
+        "label": "Image",
+        "info": "970 x 340px recommended"
+      },
+      {
+        "type": "text",
+        "id": "slide_8_link",
+        "label": "Link URL"
+      },
+      {
+        "type": "text",
+        "id": "slide_8_alt",
         "label": "Alt text"
       }
     ]
@@ -1633,6 +1649,11 @@
         "type": "checkbox",
         "id": "collections_show_sold_out_circle",
         "label": "Show product sold out circle"
+      },
+      {
+        "type": "checkbox",
+        "id": "collections_sort_by_tag",
+        "label": "Collection Sorting By Tag or Category"
       },
       {
         "type": "checkbox",

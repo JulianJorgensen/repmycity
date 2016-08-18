@@ -1,0 +1,48 @@
+@media screen and (max-width: 40em)
+{
+	.information-section{
+		padding: 5px;
+		font-family: 'Neutratext Light';
+	}
+
+	.information-section
+	{
+		h1{
+			font-size: 1.4rem;
+		}
+
+		p{
+			font-size: 1.2rem;
+		}
+	}
+}
+
+
+ @include at-query ($max, $medium) {
+	.site-nav--mobile{
+		button.site-nav__link{
+			margin-left: 30px;
+			font-size: 20px;
+		}	
+		span.icon-fallback-text{
+			font-size: 20px;
+		}
+	}
+
+	.grid-uniform{
+		margin-left:0;
+	}
+
+	.category-li li{
+		margin-left: 0;
+	}
+}
+
+@media screen and (min-width: 768px) and (max-width: 1200px)
+{
+	 div#accessupnav, div#logoupnav{
+	 	display: block;
+	 	width: 100%;
+	 }
+
+}

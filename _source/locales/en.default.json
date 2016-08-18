@@ -77,7 +77,7 @@
   },
   "collections": {
     "general": {
-      "all_of_collection": "All {{ collection }}",
+      "all_of_collection": "{{ collection }}",
       "no_matches": "Sorry, there are no products in this collection",
       "link_title": "Browse our {{ title }} collection",
       "grid_view": "Grid view",
@@ -88,7 +88,8 @@
       }
     },
     "sidebar": {
-      "tags": "Tags"
+      "tags": "Tags",
+      "categories": "CATEGORIES"
     },
     "sorting": {
       "title": "Sort by",

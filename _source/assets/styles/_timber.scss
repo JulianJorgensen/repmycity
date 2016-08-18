@@ -126,10 +126,11 @@ $zindexDrawer: 10;
 
 /*================ Typography ================*/
 
-$headerFontStack: 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$headerFontStack: 'Neutratext Bold', 'NeutraText Light', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 $headerFontWeight: 700;
+$lightfontstack: 'Neutratext Light', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 
-$bodyFontStack: 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$bodyFontStack: 'Neutratext Bold', 'Neutratext Light', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 $baseFontSize: 14px; // Henceforth known as 1em
 
 @font-face {
@@ -1467,10 +1468,10 @@ select {
   background: {
     image: url('{{ "ico-select.svg" | asset_url }}');
     repeat: no-repeat;
-    position: right 10px center;
+    position: right -15px center;
     color: transparent;
   }
-  padding-right: 28px;
+  padding-right: 20px;
   text-indent: 0.01px;
   text-overflow: '';
   cursor: pointer;

@@ -80,6 +80,7 @@ $green: #48b056;
 $wwhite: #ffffff;
 $ewhite: #eaeaea;
 
+$ligreenback: rgba(46, 86, 51, 0.9);
 
 $gray10: lighten(black, 10);
 $gray20: lighten(black, 20);
@@ -183,6 +184,7 @@ $list-style-type: disc;
 $list-style-position: outside;
 $list-side-margin: 1.25rem;
 $list-nested-side-margin: 1.25rem;
+$list-active-color:yellowgreen;
 $defnlist-margin-bottom: 1rem;
 $defnlist-term-weight: $global-weight-bold;
 $defnlist-term-margin-bottom: 0.3rem;

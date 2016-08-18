@@ -36,7 +36,8 @@
       </div>
     {% else %}
       <header class="section-header">
-        <h1 class="section-header__title section-header__left">{{ collection.title }}</h1>
+        {% comment %}<h1 class="section-header__title  section-header__left">{{ collection.title }}</h1> {% endcomment %}
+        <h4 class="section-header__title">SHOP BY: <span class="greenspan">MOST POPULAR</span><span class="grayspan">/ WHAT'S NEW</span></h4>
         <div class="section-header__right">
           {% include 'collection-sorting' %}
         </div>
@@ -54,6 +55,8 @@
         See the snippet 'product-grid-item' for the layout.
       {% endcomment %}
       {% for product in collection.products %}
+
+        {% assign grid_item_width = 'large--one-third medium--one-half' %}
 
         {% include 'product-grid-item' %}
 

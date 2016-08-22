@@ -40,6 +40,7 @@
 //  35. Tooltip
 //  36. Top Bar
 //  37. Information Section
+//  38. Product
 
 @import 'util/util';
 
@@ -601,9 +602,6 @@ $topbar-unstack-breakpoint: medium;
 //37. information section
 //------------
 
-//37. information section
-//------------
-
 
 $pt-size: 1.3rem;
 $vendor-t1: 0.7rem;
@@ -611,3 +609,10 @@ $vendor-t2: 0.65rem;
 
 $greenback: rgba(72, 184, 85, 1);
 $greenback-trans: rgba(72, 184, 85, 0.4);
+
+// 38. Product
+//-----------
+$product-bgborder-color: #959595;
+$add-cart-font-size: 1.5em;
+$card-color: #b4c8d1;
+$card-font-size: 2em;

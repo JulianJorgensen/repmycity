@@ -78,6 +78,7 @@
       "home_featured_products_show_heading": false,
       "home_page_content": "frontpage",
       "home_page_show_heading": true,
+      "product_show_inventory_table" : false,
       "product_quantity_enable": true,
       "product_image_zoom_type": "lightbox",
       "product_thumbnails_position": "below",

@@ -36,13 +36,67 @@
 	.category-li li{
 		margin-left: 0;
 	}
+
 }
+
 
 @media screen and (min-width: 768px) and (max-width: 1200px)
 {
-	 div#accessupnav, div#logoupnav{
-	 	display: block;
-	 	width: 100%;
-	 }
+	#logoupnav{
+		width: 23%;
+		transform: translateY(-10%);
 
+		.site-header__logo{
+			margin-top: 0px;
+		}
+
+		.site-header__logo-link img{
+			width: 100%;
+		}
+	}
+
+	#accessupnav{
+
+		width: 74%;
+		max-height: 45px;
+
+		#AccessibleNav li.grid__item {
+			font-size: 16px;
+		}
+
+		.upload_design_nav{
+			max-width: 200px;
+			margin-left: 30px;
+		}
+	}
+	 
+}
+
+@media screen and (max-width: 900px)
+{
+	
+
+	#AccesibleNav{
+		margin-left: 10px;
+	}
+
+	#accessupnav{
+
+		max-height: 40px;
+
+		form.search-bar input.input-group-field{
+			max-width: 120px;
+			margin-left: 15px;
+		}
+
+		li.grid__item a.site-nav__link {
+			padding: 5px 3px;
+		}
+
+		span.icon-search {
+			display: none;
+		}
+
+	}
+	
 }

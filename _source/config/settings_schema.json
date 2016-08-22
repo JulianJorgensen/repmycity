@@ -1593,6 +1593,11 @@
     "settings": [
       {
         "type": "checkbox",
+        "id": "product_show_inventory_table",
+        "label": "Show inventory table"
+      },
+      {
+        "type": "checkbox",
         "id": "product_quantity_enable",
         "label": "Show quantity selector"
       },

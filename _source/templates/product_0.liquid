@@ -6,10 +6,8 @@
 
   For more information on these Scheme.org tags, visit:
     - http://schema.org/docs/gs.html
-  Include PaymentForm css
+
 {% endcomment %}
-  
-<div class="wrapper">
 
 <div itemscope itemtype="http://schema.org/Product">
 
@@ -36,18 +34,18 @@
         Create thumbnails if we have more than one product image
       {% endcomment %}
       {% if product.images.size > 1 %}
-        <section id="ProductThumbs" class="product-single__thumbnails grid-uniform center slider">
+        <ul class="product-single__thumbnails grid-uniform" id="ProductThumbs">
+
           {% for image in product.images %}
-            <div class="grid__item one-quarter">
+            <li class="grid__item one-quarter">
               <a href="{{ image.src | img_url: 'large' }}" class="product-single__thumbnail">
                 <img src="{{ image.src | img_url: 'compact' }}" alt="{{ image.alt | escape }}">
               </a>
-            </div>
+            </li>
           {% endfor %}
-          <span>Styles</span>
-        </section>
-      {% endif %}
 
+        </ul>
+      {% endif %}
     </div>
 
     <div class="grid__item large--one-half">
@@ -118,8 +116,7 @@
               For more information on products with multiple options, visit:
                 - http://docs.shopify.com/support/your-website/themes/can-i-make-my-theme-use-products-with-multiple-options#update-product-liquid
             {% endcomment %}
-
-            <select name="id" id="productSelect" class="product-single__variants greendrop">
+            <select name="id" id="productSelect" class="product-single__variants">
               {% for variant in product.variants %}
                 {% if variant.available %}
 
@@ -136,10 +133,6 @@
               {% endfor %}
             </select>
 
-            {% if product.available and product.variants.size > 1 %}
-             {% include 'swatch' with 'Size' %}
-            {% endif %}
-
             <span class="visually-hidden">{{ 'products.general.regular_price' | t }}</span>
             <span id="ProductPrice" class="h2" itemprop="price" content="{{ current_variant.price | divided_by: 100 }}">
               {{ current_variant.price | money }}
@@ -151,14 +144,6 @@
                 {{ 'products.product.compare_at' | t }} {{ current_variant.compare_at_price | money }}
               </p>
             {% endif %}
-
-            {% comment %}
-              Choose Charity
-            {% endcomment %}
-            <select class="charity_select greendrop">
-              <option value = "0"> Choose Charity </option>
-            </select>
-
 
             <label for="Quantity" class="quantity-selector">{{ 'products.product.quantity' | t }}</label>
             <input type="number" id="Quantity" name="quantity" value="1" min="1" class="quantity-selector">
@@ -174,19 +159,10 @@
             {% endcomment %}
 
             <button type="submit" name="add" id="AddToCart" class="btn">
-              <span id="AddToCartText">{{ 'products.product.add_to_cart' | t | uppercase }}</span>
+              <span id="AddToCartText">{{ 'products.product.add_to_cart' | t }}</span>
             </button>
-
           </form>
-          
-          {% comment %}
-            Add Credit Card Payment Icon
-          {% endcomment %}
 
-          {% assign enabled_payment_types = 'visa,mastercard,discover,american-express,paypal' | remove: ' ' | split: ',' %}
-            {% for type in enabled_payment_types %}
-              <span class="pf pf-{{type}}"></span>
-            {% endfor %}
         </div>
 
         {% comment %}
@@ -232,7 +208,6 @@
       * E.g. multiple currencies http://docs.shopify.com/manual/configuration/store-customization/currencies-and-translations/currencies/how-to-toggle-between-two-currencies
 {% endcomment %}
 {{ 'option_selection.js' | shopify_asset_url | script_tag }}
-
 <script>
   var selectCallback = function(variant, selector) {
     timber.productPage({
@@ -240,20 +215,8 @@
       variant: variant,
       selector: selector
     });
-
-    if (variant) {
-  var form = jQuery('#' + selector.domIdPrefix).closest('form');
-  for (var i=0,length=variant.options.length; i<length; i++) {
-    var radioButton = form.find('.swatch[data-option-index="' + i + '"] :radio[value="' + variant.options[i] +'"]');
-    if (radioButton.size()) {
-      radioButton.get(0).checked = true;
-    }
-  }
-}
-
   };
 
-  //Option selectors
   jQuery(function($) {
     var optionSelectors = new Shopify.OptionSelectors('productSelect', {
       product: {{ product | json }},
@@ -261,10 +224,7 @@
       enableHistoryState: true
     });
 
-    //automatically select the available variant
-    optionSelectors.selectVariant({{ product.selected_or_first_available_variant.id }});
-
-
+     optionSelectors.selectVariant({{ product.selected_or_first_available_variant.id }});
 
     // Add label if only one product option and it isn't 'Title'. Could be 'Size'.
     {% if product.options.size == 1 and product.options.first != 'Title' %}
@@ -276,25 +236,7 @@
       $('.selector-wrapper').hide();
     {% endif %}
   });
-
-  
-  // Give gray background on swatch box selected and trigger variant
-  jQuery(function() {
-    jQuery('.swatch :radio').change(function() {
-      var optionIndex = jQuery(this).closest('.swatch').attr('data-option-index');
-      var optionValue = jQuery(this).val();
-      jQuery(this)
-        .closest('form')
-        .find('.single-option-selector')
-        .eq(optionIndex)
-        .val(optionValue)
-        .trigger('change');
-    });
-  });
-
 </script>
-
-
 
 {% comment %}
 Select product variants by clicking their images
@@ -346,5 +288,3 @@ Select product variants by clicking their images
 })(jQuery);
 </script> 
 {% endif %}
-
-</div>

@@ -42,7 +42,7 @@
     </div>
 
     <div class="grid--full">
-      <div class="grid__item large--one-third" id="logoupnav">
+      <div class="grid__item one-third" id="logoupnav">
         {% comment %}
           Use the uploaded logo from theme settings if enabled.
           Site name gets precedence with H1 tag on homepage, div on other pages.
@@ -65,7 +65,7 @@
           </div>
         {% endif %}
       </div>
-      <div class=" large--two-thirds grid__item medium-down--hide graybar large-right" id="accessupnav">
+      <div class=" two-thirds grid__item medium-down--hide graybar right" id="accessupnav">
         <!-- begin site-nav -->
         <ul class="site-nav grid" id="AccessibleNav">
           {% for link in linklists.main-menu.links %}
@@ -93,7 +93,7 @@
                 </ul>
               </li>
             {% else %}
-              <li class="grid__item {% if link.title contains 'UPLOAD' %}large--three-eighths medium--two-thirds{% else %}large--one-eighth medium--one-third{%endif %} {% if link.active %} site-nav--active{% endif %}">
+              <li class="grid__item {% if link.title contains 'UPLOAD' %} three-eighths{% else %} one-eighth {%endif %} {% if link.active %} site-nav--active{% endif %}">
                 <a href="{{ link.url }}" class="site-nav__link">
                 {% if link.title contains "UPLOAD" %}
                   {{ 'upload_nav.png' | asset_url | img_tag: 'UPLOAD DESIGN', 'upload_design_nav'}}
@@ -104,7 +104,7 @@
               </li>
             {% endif %}
           {% endfor %}
-          <li class=" large--one-quarter medium--one-third">
+          <li class=" one-quarter">
             <div class="site-header__search">
               {% include 'search-bar' %}
             </div>

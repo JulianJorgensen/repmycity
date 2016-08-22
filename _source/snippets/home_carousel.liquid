@@ -1,4 +1,4 @@
-
+{% comment %}
  <section class="center slider medium-down--hide">
   {% if settings.slide_1 %}
     <div>
@@ -56,6 +56,15 @@
       </a>
     </div>
   {% endif %}
-  
 </section>
+{% endcomment %}
 
+<section id="homeautoslider" class="center slider">
+  {% for product in collections.carousel.products limit:12%}
+   <div>
+    <a href="{{ product.url | within: collection }}" class="grid__image">
+      <img src="{{ product.featured_image.src | img_url: 'large' }}" alt="{{ product.featured_image.alt | escape }}">
+     </a>
+  </div>
+  {% endfor %}
+</section>

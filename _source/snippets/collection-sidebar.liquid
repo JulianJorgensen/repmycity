@@ -116,5 +116,14 @@
     </li>
 
   </ul>
+
+  <h3 class="text-primary">SEARCH</h3>
+  {% include 'search-bar' %}
+
+  <h3 class="text-primary">MAP</h3>
+  <a href="/pages/map">
+    <img src={{ 'map.png' | asset_url }}></img>
+  </a>
+
 {% endif %}
 <script>make_state_list();</script>

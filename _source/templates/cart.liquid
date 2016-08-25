@@ -22,18 +22,44 @@
         {% for item in cart.items %}
           <tr class="cart__row table__section">
             <td data-label="{{ 'customer.order.product' | t }}">
-              <a href="{{ item.url | within: collections.all }}" class="cart__image">
-                {% comment %}
-                  More image size options at:
-                    - http://docs.shopify.com/themes/filters/product-img-url
-                {% endcomment %}
+
+              {% comment %}
+                For Product Customify : change general cart item image to custom product image.
+                - origin
+
+                <a href="{{ item.url | within: collections.all }}" class="cart__image">
                 <img src="{{ item | img_url: 'medium' }}" alt="{{ item.title | escape }}">
-              </a>
+                  </a>
+
+                - new below
+              {% endcomment %}
+
+              {% if item.properties.customify_id %}
+                  <a href="{{ shop.url }}/apps/customify?show_custom=1&id={{ item.properties.customify_id }}" class="cart__image">
+                    <img src="{{ shop.url }}/apps/customify?show_custom=1&id={{ item.properties.customify_id }}" style="width: 100px;" alt="{{ item.title | escape }}">
+                  </a>
+              {% else %}
+                <a href="{{ item.url | within: collections.all }}" class="cart__image">
+                    <img src="{{ item | img_url: 'medium' }}" alt="{{ item.title | escape }}">
+                  </a>
+              {% endif %}
+
             </td>
             <td>
+              {% comment %}
+                For product customify: add view custom product link
+                - origin
+                <a href="{{ item.url }}" class="h4">
+                {{ item.product.title }}
+                </a>
+                - new below
+              {% endcomment%}
+
               <a href="{{ item.url }}" class="h4">
                 {{ item.product.title }}
-              </a>
+              </a> {% include 'customify-item' %}
+
+
               {% unless item.variant.title contains 'Default' %}
                 <br>
                 <small>{{ item.variant.title }}</small>
@@ -52,7 +78,15 @@
               {% assign property_size = item.properties | size %}
               {% if property_size > 0 %}
                 {% for p in item.properties %}
-                  {% unless p.last == blank %}
+
+                  {% comment %}
+                    Product Customify: Hide customify attributes on the cart properties list
+                    - origin
+                     unless p.last == blank
+                    - new below
+                  {% endcomment %}
+
+                  {% unless p.last == blank or p.first contains 'customify' %}
                     {{ p.first }}:
 
                     {% comment %}

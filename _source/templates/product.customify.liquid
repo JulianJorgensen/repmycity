@@ -1,0 +1,23 @@
+<style type='text/css' >
+#customify-content h1 { text-align: center; }
+#customify-options { padding: 0px; margin: 15px 0px;  }
+#customify-options li { list-style-type: none; margin: 0px 10px 0px 0px; display: inline-block; }
+#customify { margin-top: 15px; }</style>
+<div class='clearfix' id='customify-content' >
+   <h1>{{ product.title }}</h1>
+   <form name='customify_form'  id='customify_form' action='/cart/add' method='post' enctype='multipart/form-data' >
+    <input type='file' id='customify-upload' name='properties[customify_upload]' style='display: none'  />
+    <input type='hidden' id='customify_id' name='properties[customify_id]' />
+        <ul id='customify-options' >
+       <li><label>Options:</label></li>
+       <li><select id='product-select' name='id'  >
+            {% for variant in product.variants %}
+            <option value='{{ variant.id }}'>{{ variant.title }} - {{ variant.price | money }}</option>
+            {% endfor %}
+          </select></li>
+       <li><label  for='quantity' >Quantity:</label></li>
+       <li><input id='quantity' type='number' name='quantity' class='styled-input' value='1' /></li>
+   </ul>
+   </form>
+   <div id='customify' {% unless product.available %}data-hide='1'{% endunless %} data-product='{{ product.id }}' ></div>
+<p class='clearfix' >{{ product.description }}</p></div><!--end customify content !-->
